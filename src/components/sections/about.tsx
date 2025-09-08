@@ -3,11 +3,11 @@
 import { Code, Database, Palette, Smartphone, Globe, Zap } from "lucide-react";
 
 const skills = [
-  { name: "Frontend", icon: Palette, technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"] },
-  { name: "Backend", icon: Database, technologies: ["Node.js", "Express", "Prisma", "PostgreSQL", "MongoDB"] },
-  { name: "Mobile", icon: Smartphone, technologies: ["React Native", "Expo", "Flutter", "Swift"] },
-  { name: "DevOps", icon: Globe, technologies: ["Docker", "AWS", "Vercel", "GitHub Actions", "CI/CD"] },
-  { name: "Tools", icon: Code, technologies: ["Git", "Figma", "VS Code", "Postman", "Jest"] },
+  { name: "Frontend", icon: Palette, technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "HTML", "CSS", "JavaScript"] },
+  { name: "Backend", icon: Database, technologies: ["Node.js", "Express", "Prisma", "PostgreSQL", "MongoDB", "PHP", "SQL"] },
+  { name: "Mobile", icon: Smartphone, technologies: ["React Native", "Expo"] },
+  { name: "DevOps", icon: Globe, technologies: ["Docker", "AWS", "Vercel", "GitHub Actions", "CI/CD", "Hostinger", "Hostigator"] },
+  { name: "Ferramentas", icon: Code, technologies: ["Git", "Figma", "VS Code", "Postman", "Jest", "Excel", "Word", "PowerPoint", "Notion", "Trello", "WordPress", "N8N", "Typebot"] },
   { name: "Performance", icon: Zap, technologies: ["Webpack", "Vite", "Lighthouse", "Core Web Vitals"] }
 ];
 
@@ -20,8 +20,8 @@ export function About() {
             Sobre Mim
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Desenvolvedor apaixonado por tecnologia com mais de 3 anos de experiência criando 
-            soluções digitais inovadoras e escaláveis.
+            Sou formado em Análise e Desenvolvimento de Sistemas pela FATEC Centro Paula Souza (São José do Rio Preto), com experiência em suporte, desenvolvimento e infraestrutura. Atuei na Siriusys (Mirassol/SP), administrando plataformas, aplicativos, realizando treinamentos, suporte ao cliente e configuração de servidores. 
+            Tenho facilidade de adaptação, postura colaborativa, proatividade e foco em resultados. Busco aprendizado contínuo e valorizo o trabalho em equipe.
           </p>
         </div>
 
@@ -30,25 +30,32 @@ export function About() {
           <div className="space-y-6 slide-in-up">
             <div className="prose prose-lg dark:prose-invert">
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                Sou um desenvolvedor full-stack especializado em criar experiências digitais excepcionais. 
-                Minha paixão é transformar ideias complexas em soluções elegantes e funcionais.
+                Minha trajetória profissional é marcada pela busca constante de conhecimento e evolução. 
+                Tenho experiência operacional e administrativa, lidando diretamente com clientes e equipes, sempre com responsabilidade e compromisso com resultados.
               </p>
-              
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                Com expertise em tecnologias modernas como React, Next.js, Node.js e bancos de dados, 
-                trabalho para entregar produtos que não apenas funcionam perfeitamente, mas também 
-                proporcionam uma experiência de usuário memorável.
+                Sou proativo na identificação de problemas e oportunidades, comunicando-me com clareza e objetividade. Valorizo a troca de conhecimento e acredito que desafios exigem pensamento crítico, criatividade e foco na solução.
               </p>
             </div>
 
             <div className="grid grid-cols-2 gap-6 pt-8">
               <div className="text-center p-6 rounded-2xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-white/20">
-                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">50+</div>
-                <div className="text-sm text-gray-600 dark:text-gray-300">Projetos Concluídos</div>
+                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">1+</div>
+                <div className="text-sm text-gray-600 dark:text-gray-300">Ano de Experiência Profissional</div>
               </div>
               <div className="text-center p-6 rounded-2xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-white/20">
-                <div className="text-3xl font-bold text-purple-600 dark:text-purple-400">3+</div>
-                <div className="text-sm text-gray-600 dark:text-gray-300">Anos de Experiência</div>
+                <div className="text-3xl font-bold text-purple-600 dark:text-purple-400">2024</div>
+                <div className="text-sm text-gray-600 dark:text-gray-300">Formado pela FATEC</div>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-6 pt-8">
+              <div className="text-center p-6 rounded-2xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-white/20">
+                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">Português</div>
+                <div className="text-sm text-gray-600 dark:text-gray-300">Nativo</div>
+              </div>
+              <div className="text-center p-6 rounded-2xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-white/20">
+                <div className="text-3xl font-bold text-purple-600 dark:text-purple-400">Inglês</div>
+                <div className="text-sm text-gray-600 dark:text-gray-300">Básico / Intermediário</div>
               </div>
             </div>
           </div>

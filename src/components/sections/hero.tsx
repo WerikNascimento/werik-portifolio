@@ -20,19 +20,21 @@ export function Hero() {
         <div className="space-y-6 fade-in">
           <div className="inline-flex items-center rounded-full border px-4 py-2 text-sm backdrop-blur-sm bg-white/10 border-white/20">
             <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
-            <span className="text-white">Disponível para novos projetoss</span>
+            <span className="text-white">Disponível para novos projetos</span>
           </div>
           
           <h1 className="text-4xl font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
             <span className="block">Olá, eu sou</span>
             <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-              Wérik Nascimento
+              Wérik Prado Nascimento
             </span>
           </h1>
           
-          <p className="max-w-3xl text-lg text-gray-600 dark:text-gray-300 sm:text-xl leading-relaxed">
-            Desenvolvedor Full-Stack especializado em criar experiências digitais excepcionais. 
-            Transformo ideias em realidade através de código limpo, design moderno e tecnologia de ponta.
+          <p className="max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-300 sm:text-xl leading-relaxed">
+            Desenvolvedor formado pela FATEC de São José do Rio Preto, com experiência em suporte, desenvolvimento e infraestrutura. 
+            Busco oportunidades para aplicar minhas habilidades, crescer profissionalmente e contribuir para resultados sólidos.
+            <br />
+            <span className="font-semibold block mt-4">Araraquara - SP | (17) 98204-8682 | w10p01n04@gmail.com</span>
           </p>
         </div>
 
@@ -49,13 +51,13 @@ export function Hero() {
 
         {/* Redes sociais */}
         <div className="flex gap-6 pt-8 slide-in-up" style={{ animationDelay: '0.4s' }}>
-          <a href="https://github.com" className="p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-110">
+          <a href="https://github.com/werik-nascimento" className="p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-110">
             <Github className="w-6 h-6 text-gray-100" />
           </a>
-          <a href="https://linkedin.com" className="p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-110">
+          <a href="https://linkedin.com/in/werik-nascimento" className="p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-110">
             <Linkedin className="w-6 h-6 text-gray-100" />
           </a>
-          <a href="mailto:contato@werik.dev" className="p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-110">
+          <a href="mailto:contato.atlas.dev@gmail.com" className="p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-110">
             <Mail className="w-6 h-6 text-gray-100" />
           </a>
         </div>
