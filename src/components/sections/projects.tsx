@@ -87,7 +87,7 @@ export function Projects() {
   // Filtrar projetos
   const filteredProjects = projects.filter(project => {
     const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         project.description.toLowerCase().includes(searchTerm.toLowerCase());
+      project.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesLanguage = selectedLanguage === "all" || project.language === selectedLanguage;
     return matchesSearch && matchesLanguage;
   });
@@ -108,12 +108,12 @@ export function Projects() {
               {projects.length} Projetos Desenvolvidos
             </span>
           </div>
-          
+
           <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
             Meus Projetos
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Uma coleção dos meus projetos mais recentes e impactantes. 
+            Uma coleção dos meus projetos mais recentes e impactantes.
             Cada projeto representa uma jornada de aprendizado e inovação.
           </p>
         </div>
@@ -157,7 +157,7 @@ export function Projects() {
               <Sparkles className="w-6 h-6 text-yellow-500" />
               <h3 className="text-3xl font-bold text-gray-800 dark:text-gray-200">Projetos em Destaque</h3>
             </div>
-            
+
             <div className="grid lg:grid-cols-2 gap-8">
               {featuredProjects.map((project, index) => (
                 <div
@@ -166,7 +166,7 @@ export function Projects() {
                   style={{ animationDelay: `${index * 0.2}s` }}
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                  
+
                   <div className="relative p-8">
                     <div className="flex items-start justify-between mb-6">
                       <div className="flex-1">
@@ -193,7 +193,7 @@ export function Projects() {
                             </div>
                           </div>
                         </div>
-                        
+
                         <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
                           {project.description}
                         </p>
@@ -218,7 +218,7 @@ export function Projects() {
                           Ver Código
                         </a>
                       </Button>
-                      
+
                       {project.url && (
                         <Button asChild variant="outline" className="px-6 rounded-2xl border-2 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all duration-300">
                           <a href={project.url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
@@ -242,7 +242,7 @@ export function Projects() {
               <Code2 className="w-6 h-6 text-blue-500" />
               <h3 className="text-3xl font-bold text-gray-800 dark:text-gray-200">Todos os Projetos</h3>
             </div>
-            
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {otherProjects.map((project, index) => (
                 <div
@@ -254,11 +254,10 @@ export function Projects() {
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-2">
-                          <div className={`w-3 h-3 rounded-full ${
-                            project.language === 'TypeScript' ? 'bg-blue-500' :
-                            project.language === 'JavaScript' ? 'bg-yellow-500' :
-                            project.language === 'Vue' ? 'bg-green-500' : 'bg-gray-500'
-                          }`} />
+                          <div className={`w-3 h-3 rounded-full ${project.language === 'TypeScript' ? 'bg-blue-500' :
+                              project.language === 'JavaScript' ? 'bg-yellow-500' :
+                                project.language === 'Vue' ? 'bg-green-500' : 'bg-gray-500'
+                            }`} />
                           <h4 className="text-lg font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                             {project.title}
                           </h4>
@@ -279,7 +278,7 @@ export function Projects() {
                         <span>{project.forks}</span>
                       </div>
                     </div>
-                    
+
                     <div className="flex flex-wrap gap-1 mb-4">
                       {project.technologies.slice(0, 3).map((tech) => (
                         <span
@@ -303,7 +302,7 @@ export function Projects() {
                           Código
                         </a>
                       </Button>
-                      
+
                       {project.url && (
                         <Button asChild size="sm" variant="ghost" className="px-3 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/20">
                           <a href={project.url} target="_blank" rel="noopener noreferrer">

@@ -1,16 +1,16 @@
-// Funções utilitárias gerais
-import { type ClassValue, clsx } from "clsx";
-import { twMerge } from "tailwind-merge";
-
-export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
+/**
+ * Junta múltiplas classes CSS em uma única string, ignorando valores falsy.
+ */
+export function cn(...classes: (string | undefined | null | false)[]): string {
+  return classes.filter(Boolean).join(" ");
 }
 
-// Formatação de data
-export const formatDate = (date: Date): string => {
-  return new Date(date).toLocaleDateString("pt-BR", {
-    day: "2-digit",
-    month: "long",
-    year: "numeric",
-  });
-};
+/**
+ * Formata uma data para o padrão brasileiro (dd/mm/yyyy).
+ */
+export function formatDate(date: Date | string): string {
+  const d = typeof date === "string" ? new Date(date) : date;
+  return d.toLocaleDateString("pt-BR");
+}
+
+// Adicione outras funções utilitárias conforme necessário

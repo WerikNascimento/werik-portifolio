@@ -32,7 +32,7 @@ export function Footer() {
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="mailto:contato@werik.dev"
+                href="mailto:contato.atlas.dev@gmail.com"
                 className="p-2 rounded-full bg-gray-700 hover:bg-blue-600 transition-colors duration-300"
                 aria-label="Email"
               >
@@ -67,8 +67,8 @@ export function Footer() {
           <div className="space-y-4 fade-in" style={{ animationDelay: '0.2s' }}>
             <h4 className="text-lg font-semibold">Contato</h4>
             <div className="space-y-2 text-gray-300">
-              <p>contato@werik.dev</p>
-              <p>+55 (11) 99999-9999</p>
+              <p>contato.atlas.dev@gmail.com</p>
+              <p>+55 (17) 98204-8682</p>
               <p>São Paulo, SP - Brasil</p>
             </div>
           </div>
@@ -77,11 +77,13 @@ export function Footer() {
         {/* Bottom */}
         <div className="border-t border-gray-700 mt-8 pt-8 text-center fade-in" style={{ animationDelay: '0.3s' }}>
           <p className="text-gray-400 flex items-center justify-center">
-            Feito com <Heart className="w-4 h-4 mx-1 text-red-500" /> por Wérik Nascimento • © 2025
+            Feito por Wérik Nascimento • © 2025 Todos os direitos reservados
           </p>
         </div>
       </div>
     </footer>
   );
 }
+
+//<Heart className="w-4 h-4 mx-1 text-red-500" /> ISSO AQUI É UM CORAÇÃO VERMELHO
   

@@ -1,117 +1,35 @@
-"use client";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { Button } from "@/components/ui/button";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { toast } from "@/components/ui/use-toast";
-
-// Schema de validação do formulário
-const formSchema = z.object({
-  name: z.string().min(2, "Nome deve ter pelo menos 2 caracteres"),
-  email: z.string().email("E-mail inválido"),
-  message: z.string().min(10, "Mensagem muito curta"),
-});
+import { MessageCircle } from "lucide-react";
 
 export default function ContactPage() {
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      name: "",
-      email: "",
-      message: "",
-    },
-  });
-
-  const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(values),
-      });
-
-      if (response.ok) {
-        toast({
-          title: "Mensagem enviada!",
-          description: "Obrigado pelo contato. Responderei em breve!",
-        });
-        form.reset();
-      }
-    } catch {
-      toast({
-        title: "Erro",
-        description: "Não foi possível enviar a mensagem. Tente novamente.",
-        variant: "destructive",
-      });
-    }
-  };
-
   return (
-    <section className="container py-12 md:py-24 lg:py-32">
-      <div className="mx-auto max-w-2xl">
-        <h1 className="mb-8 text-3xl font-bold md:text-4xl">Contato</h1>
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-            <FormField
-              control={form.control}
-              name="name"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Nome</FormLabel>
-                  <FormControl>
-                    <Input placeholder="Seu nome" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="email"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>E-mail</FormLabel>
-                  <FormControl>
-                    <Input placeholder="seu@email.com" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="message"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Mensagem</FormLabel>
-                  <FormControl>
-                    <Textarea
-                      placeholder="Sua mensagem..."
-                      className="min-h-[120px]"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <Button type="submit" className="w-full md:w-auto">
-              Enviar Mensagem
-            </Button>
-          </form>
-        </Form>
+    <section
+      id="contact"
+      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-purple-50 to-pink-100 dark:from-gray-900 dark:via-purple-900 dark:to-pink-900"
+    >
+      <div className="max-w-lg w-full mx-auto bg-white dark:bg-gray-900 rounded-3xl shadow-2xl p-10 text-center border border-blue-100 dark:border-purple-900">
+        <div className="flex flex-col items-center gap-4 mb-8">
+          <span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-500/10 text-green-600 dark:text-green-400">
+            <MessageCircle className="w-10 h-10" />
+          </span>
+          <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent mb-2">
+            Entre em contato
+          </h2>
+          <p className="text-lg text-gray-600 dark:text-gray-300">
+            Fique à vontade para me chamar no WhatsApp!
+          </p>
+        </div>
+        <a
+          href="https://wa.me/5511999999999" // Troque pelo seu número
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-xl font-semibold shadow-lg hover:scale-105 hover:from-green-600 hover:to-green-700 transition-all text-lg"
+        >
+          <MessageCircle className="w-6 h-6" />
+          Falar no WhatsApp
+        </a>
+        <div className="mt-10 text-sm text-gray-400 dark:text-gray-500">
+          Ou envie um e-mail para <span className="font-medium text-blue-600 dark:text-blue-400">contato.atlas.dev@gmail.com</span>
+        </div>
       </div>
     </section>
   );
