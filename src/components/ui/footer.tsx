@@ -1,6 +1,7 @@
 "use client";
 
-import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
+import Link from "next/link";
 
 export function Footer() {
   return (
@@ -13,7 +14,7 @@ export function Footer() {
               Wérik Nascimento
             </h3>
             <p className="text-gray-300 leading-relaxed">
-              Desenvolvedor Full-Stack apaixonado por criar experiências digitais excepcionais 
+              Desenvolvedor Full-Stack apaixonado por criar experiências digitais excepcionais
               e soluções inovadoras.
             </p>
             <div className="flex space-x-4">
@@ -46,19 +47,19 @@ export function Footer() {
             <h4 className="text-lg font-semibold">Links Rápidos</h4>
             <ul className="space-y-2">
               <li>
-                <a href="/#about" className="text-gray-300 hover:text-blue-400 transition-colors duration-300">
+                <Link href="/sobre" className="text-gray-300 hover:text-blue-400 transition-colors duration-300">
                   Sobre Mim
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#projects" className="text-gray-300 hover:text-blue-400 transition-colors duration-300">
+                <Link href="/projetos" className="text-gray-300 hover:text-blue-400 transition-colors duration-300">
                   Projetos
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/contact" className="text-gray-300 hover:text-blue-400 transition-colors duration-300">
+                <Link href="/contato" className="text-gray-300 hover:text-blue-400 transition-colors duration-300">
                   Contato
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -84,5 +85,3 @@ export function Footer() {
     </footer>
   );
 }
-
-//<Heart className="w-4 h-4 mx-1 text-red-500" /> ISSO AQUI É UM CORAÇÃO VERMELHO

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Search, Github, Star, GitFork, Calendar, Code2, Sparkles, ExternalLink } from "lucide-react";
+import { Search, Github, Star, GitFork, Code2, Sparkles, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
