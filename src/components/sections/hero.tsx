@@ -20,7 +20,7 @@ export function Hero() {
         <div className="space-y-6 fade-in">
           <div className="inline-flex items-center rounded-full border px-4 py-2 text-sm backdrop-blur-sm bg-white/10 border-white/20">
             <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
-            Disponível para novos projetos
+            <span className="text-white">Disponível para novos projetoss</span>
           </div>
           
           <h1 className="text-4xl font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
@@ -38,25 +38,25 @@ export function Hero() {
 
         <div className="flex flex-col sm:flex-row gap-4 items-center slide-in-up" style={{ animationDelay: '0.2s' }}>
           <Button size="lg" className="px-8 py-3 text-lg font-semibold rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-            Ver Meus Projetos
+            <span className="text-gray-100">Ver Meus Projetos</span>
           </Button>
           
           <Button variant="outline" size="lg" className="px-8 py-3 text-lg font-semibold rounded-full border-2 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-300">
-            <Mail className="w-5 h-5 mr-2" />
-            Entrar em Contato
+            <Mail className="w-5 h-5 mr-2 text-gray-100" />
+            <span className="text-gray-100">Entrar em Contato</span>
           </Button>
         </div>
 
         {/* Redes sociais */}
         <div className="flex gap-6 pt-8 slide-in-up" style={{ animationDelay: '0.4s' }}>
           <a href="https://github.com" className="p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-110">
-            <Github className="w-6 h-6" />
+            <Github className="w-6 h-6 text-gray-100" />
           </a>
           <a href="https://linkedin.com" className="p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-110">
-            <Linkedin className="w-6 h-6" />
+            <Linkedin className="w-6 h-6 text-gray-100" />
           </a>
           <a href="mailto:contato@werik.dev" className="p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-110">
-            <Mail className="w-6 h-6" />
+            <Mail className="w-6 h-6 text-gray-100" />
           </a>
         </div>
 

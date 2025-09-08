@@ -18,14 +18,14 @@ export function Footer() {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://github.com"
+                href="https://github.com/WerikNascimento"
                 className="p-2 rounded-full bg-gray-700 hover:bg-blue-600 transition-colors duration-300"
                 aria-label="GitHub"
               >
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/werik-nascimento-141898259"
                 className="p-2 rounded-full bg-gray-700 hover:bg-blue-600 transition-colors duration-300"
                 aria-label="LinkedIn"
               >
@@ -86,4 +86,3 @@ export function Footer() {
 }
 
 //<Heart className="w-4 h-4 mx-1 text-red-500" /> ISSO AQUI É UM CORAÇÃO VERMELHO
-  
