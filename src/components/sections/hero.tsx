@@ -39,14 +39,18 @@ export function Hero() {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 items-center slide-in-up" style={{ animationDelay: '0.2s' }}>
-          <Button size="lg" className="px-8 py-3 text-lg font-semibold rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-            <span className="text-gray-100">Ver Meus Projetos</span>
-          </Button>
+          <a href="#projects">
+            <Button size="lg" className="px-8 py-3 text-lg font-semibold rounded-full bg-gradient-to-r from-blue-600 to-purple-700 hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+              <span className="text-gray-100">Ver Meus Projetos</span>
+            </Button>
+          </a>
           
-          <Button variant="outline" size="lg" className="px-8 py-3 text-lg font-semibold rounded-full border-2 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-300">
-            <Mail className="w-5 h-5 mr-2 text-gray-100" />
-            <span className="text-gray-100">Entrar em Contato</span>
-          </Button>
+          <a href="#contact">
+            <Button variant="outline" size="lg" className="px-8 py-3 text-lg font-semibold rounded-full border-2 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-300">
+              <Mail className="w-5 h-5 mr-2 text-gray-100" />
+              <span className="text-gray-100">Entrar em Contato</span>
+            </Button>
+          </a>
         </div>
 
         {/* Redes sociais */}
