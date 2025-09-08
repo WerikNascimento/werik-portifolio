@@ -34,7 +34,7 @@ export function Hero() {
             Desenvolvedor formado pela FATEC de São José do Rio Preto, com experiência em suporte, desenvolvimento e infraestrutura. 
             Busco oportunidades para aplicar minhas habilidades, crescer profissionalmente e contribuir para resultados sólidos.
             <br />
-            <span className="font-semibold block mt-4">Araraquara - SP | (17) 98204-8682 | w10p01n04@gmail.com</span>
+            <span className="font-semibold block mt-4">Bálsamo - SP | (17) 98204-8682 | w10p01n04@gmail.com</span>
           </p>
         </div>
 
